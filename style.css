@@ -68,27 +68,19 @@ nav a:hover{
 
 .hero{
   position:relative;
-
   width:100%;
   height:100vh;
-
   overflow:hidden;
 }
 
 .hero video{
   position:absolute;
-
   inset:0;
-
   width:100%;
   height:100%;
-
   object-fit:cover;
-
   z-index:0;
-
   transform-origin:center center;
-
   will-change:transform;
 }
 
@@ -99,11 +91,8 @@ nav a:hover{
 .overlay{
   position:absolute;
   inset:0;
-
   background:rgba(0,0,0,0);
-
   z-index:1;
-
   will-change:background-color;
 }
 
@@ -113,29 +102,21 @@ nav a:hover{
 
 .side-text{
   position:absolute;
-
   top:50%;
-
   transform:translateY(-50%);
-
   z-index:10;
 
   display:flex;
   flex-direction:column;
 
   color:rgba(255,255,255,.95);
-
   text-transform:uppercase;
-
   font-weight:700;
-
   letter-spacing:4px;
 
   text-shadow:
-  0 0 10px rgba(255,255,255,.15),
-  0 0 30px rgba(255,255,255,.08);
-
-  will-change:opacity;
+    0 0 10px rgba(255,255,255,.15),
+    0 0 30px rgba(255,255,255,.08);
 }
 
 .left-side{
@@ -148,118 +129,76 @@ nav a:hover{
 }
 
 .side-text span{
-
   font-size:clamp(2rem,4vw,5rem);
-
   line-height:.9;
 
   opacity:0;
-
   transform:translateY(30px);
 
   animation:fadeUp .8s ease forwards;
 }
 
 /* ==========================
-   CASCATA
-========================== */
-
-.left-side span:nth-child(1){
-  animation-delay:.2s;
-}
-
-.left-side span:nth-child(2){
-  animation-delay:.5s;
-}
-
-.right-side span:nth-child(1){
-  animation-delay:.8s;
-}
-
-.right-side span:nth-child(2){
-  animation-delay:1.1s;
-}
-
-.right-side span:nth-child(3){
-  animation-delay:1.4s;
-}
-
-.right-side span:nth-child(4){
-  animation-delay:1.7s;
-}
-
-/* ==========================
-   ABOUT OVERLAY
+   ABOUT
 ========================== */
 
 .about-overlay{
-
   position:absolute;
-
   inset:0;
 
   display:flex;
-
   justify-content:center;
-
   align-items:center;
 
   z-index:20;
-
   pointer-events:none;
 }
 
 .about-content{
-
   max-width:900px;
-
   text-align:center;
-
   color:white;
 
   opacity:0;
 
-  will-change:opacity;
+  will-change:opacity, transform;
 }
 
 .about-content h2{
-
   font-size:clamp(3rem,6vw,5rem);
-
   margin-bottom:30px;
 }
 
 .about-content p{
-
   font-size:1.2rem;
-
   line-height:1.8;
-
   opacity:.9;
 }
 
 /* ==========================
-   PROJECTS
+   PROJECTS (IMPORTANTE: SEM TRANSFORM FIXO)
 ========================== */
 
-.projects{
+.projects-title{
 
-  min-height:100vh;
+  position:absolute;
 
-  background:#0b0b0b;
+  top:50%;
+  left:50%;
 
+  transform:translate(-50%, 80px);
+
+  opacity:0;
+
+  font-size:clamp(2rem,3.5vw,3.2rem);
+  font-weight:800;
+  letter-spacing:6px;
+  text-transform:uppercase;
   color:white;
 
-  display:flex;
+  z-index:30;
 
-  justify-content:center;
-
-  align-items:center;
-}
-
-.projects h2{
-
-  font-size:clamp(3rem,6vw,5rem);
+  will-change:transform, opacity;
 }
 
 /* ==========================
@@ -267,117 +206,40 @@ nav a:hover{
 ========================== */
 
 @keyframes fadeUp{
-
   from{
-
     opacity:0;
-
     transform:translateY(30px);
-
   }
-
   to{
-
     opacity:1;
-
     transform:translateY(0);
-
   }
-
 }
 
 /* ==========================
-   TABLET
+   RESPONSIVO
 ========================== */
 
 @media(max-width:1100px){
-
-  .left-side{
-    left:50px;
-  }
-
-  .right-side{
-    right:50px;
-  }
-
-  .side-text span{
-    font-size:clamp(1.8rem,4vw,3rem);
-  }
-
+  .left-side{ left:50px; }
+  .right-side{ right:50px; }
 }
-
-/* ==========================
-   MOBILE
-========================== */
 
 @media(max-width:768px){
+  header{ padding:25px; }
+  nav{ gap:15px; }
 
-  header{
-    padding:25px;
-  }
-
-  nav{
-    gap:15px;
-  }
-
-  .left-side{
-    left:20px;
-  }
-
-  .right-side{
-    right:20px;
-  }
+  .left-side{ left:20px; }
+  .right-side{ right:20px; }
 
   .side-text span{
-
     font-size:1.2rem;
-
     letter-spacing:2px;
   }
-
-  .about-content{
-
-    padding:0 30px;
-  }
-
 }
-
-/* ==========================
-   SMALL MOBILE
-========================== */
 
 @media(max-width:480px){
-
-  .logo{
-    font-size:.9rem;
-  }
-
-  nav a{
-    font-size:.9rem;
-  }
-
-  .side-text span{
-    font-size:1rem;
-  }
-
-}
-.projects-title{
-
-  margin-top:60px;
-
-  font-size:clamp(2rem,3.5vw,3.2rem);
-
-  font-weight:800;
-
-  letter-spacing:6px;
-
-  text-transform:uppercase;
-
-  color:white;
-
-  opacity:0;
-
-  transform:translateY(40px);
-
-  will-change:opacity, transform;
+  .logo{ font-size:.9rem; }
+  nav a{ font-size:.9rem; }
+  .side-text span{ font-size:1rem; }
 }
