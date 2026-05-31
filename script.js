@@ -29,6 +29,42 @@ const tl = gsap.timeline({
 });
 
 /* ==========================
+   LOGO MORPH
+========================== */
+
+tl.to(".remove-letter", {
+
+  opacity:0,
+
+  x:-20,
+
+  stagger:0.05
+
+}, 0.15);
+
+tl.to(".i-letter", {
+
+  scale: 2.5,
+
+  color: "#FFD700",
+
+  textShadow: `
+    0 0 8px rgba(255,215,0,.6),
+    0 0 18px rgba(255,215,0,.4),
+    0 0 28px rgba(255,215,0,.2)
+  `,
+
+  ease: "none"
+
+}, 0.15);
+
+tl.to(".surname", {
+
+  x:-45
+
+}, 0.25);
+
+/* ==========================
    ZOOM VÍDEO
 ========================== */
 
@@ -44,7 +80,7 @@ tl.to(".hero video", {
 tl.to(".overlay", {
   backgroundColor: "rgba(0,0,0,1)",
   ease: "none"
-}, 0.3);
+}, 0.2  );
 
 /* ==========================
    TEXTOS LATERAIS
