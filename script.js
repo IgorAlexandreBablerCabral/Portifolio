@@ -16,7 +16,7 @@ const tl = gsap.timeline({
 
 tl.to(".hero video",{
 
-  scale:4,
+  scale:2.5,
 
   ease:"none",
 
@@ -53,3 +53,12 @@ tl.to(".about-content",{
   duration:.7
 
 },0.4);
+tl.to(".projects-title", {
+
+  opacity: 1,
+
+  y: 0,
+
+  duration: 0.6
+
+}, 0.65);
