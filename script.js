@@ -1,64 +1,91 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
+/* ==========================
+   ESTADOS INICIAIS
+========================== */
 
-  scrollTrigger:{
-    trigger:".hero",
-    start:"top top",
-    end:"+=2500",
-    scrub:true,
-    pin:true
-  }
-
+gsap.set(".about-content", {
+  opacity: 0,
+  y: 30
 });
 
-/* ZOOM DO VÍDEO */
+gsap.set(".projects-title", {
+  opacity: 0,
+  y: 120
+});
 
-tl.to(".hero video",{
+/* ==========================
+   TIMELINE PRINCIPAL
+========================== */
 
-  scale:2.5,
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "+=2500",
+    scrub: 1.2, // 🔥 IMPORTANTE: suaviza e evita sumiço
+    pin: true
+  }
+});
 
-  ease:"none",
+/* ==========================
+   ZOOM VÍDEO
+========================== */
 
-  duration:1
+tl.to(".hero video", {
+  scale: 4,
+  ease: "none"
+}, 0);
 
-},0);
+/* ==========================
+   ESCURECIMENTO
+========================== */
 
-/* ESCURECIMENTO */
+tl.to(".overlay", {
+  backgroundColor: "rgba(0,0,0,1)",
+  ease: "none"
+}, 0.3);
 
-tl.to(".overlay",{
+/* ==========================
+   TEXTOS LATERAIS
+========================== */
 
-  backgroundColor:"rgba(0,0,0,1)",
+tl.to(".side-text", {
+  opacity: 0,
+  y: 60
+}, 0);
 
-  duration:1
+/* ==========================
+   ABOUT ENTRA E SAI (MAIS LIMPO)
+========================== */
 
-},0);
-
-/* TEXTOS SOMEM */
-
-tl.to(".side-text",{
-
-  opacity:0,
-
-  duration:.5
-
-},0);
-
-/* ABOUT APARECE NO CENTRO */
-
-tl.to(".about-content",{
-
-  opacity:1,
-
-  duration:.7
-
-},0.4);
-tl.to(".projects-title", {
-
+tl.to(".about-content", {
   opacity: 1,
-
   y: 0,
+  ease: "none"
+}, 0.45);
 
-  duration: 0.6
+tl.to(".about-content", {
+  opacity: 0,
+  y: -40,
+  ease: "none"
+}, 0.5);
 
-}, 0.65);
+/* ==========================
+   PROJECTS ENTRA (FORÇADO E LIMPO)
+========================== */
+
+tl.to(".projects-title", {
+  opacity: 1,
+  y: -40,
+  ease: "power2.out"
+}, 0.75);
+
+/* ==========================
+   GARANTE VISIBILIDADE FINAL
+========================== */
+
+tl.set(".projects-title", {
+  opacity: 1,
+  y: 0
+}, 1);
