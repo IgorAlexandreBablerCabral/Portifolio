@@ -100,7 +100,7 @@ nav a:hover{
   position:absolute;
   inset:0;
 
-  background:rgba(0,0,0,.08);
+  background:rgba(0,0,0,0);
 
   z-index:1;
 
@@ -360,4 +360,24 @@ nav a:hover{
     font-size:1rem;
   }
 
+}
+.projects-title{
+
+  margin-top:60px;
+
+  font-size:clamp(2rem,3.5vw,3.2rem);
+
+  font-weight:800;
+
+  letter-spacing:6px;
+
+  text-transform:uppercase;
+
+  color:white;
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  will-change:opacity, transform;
 }
