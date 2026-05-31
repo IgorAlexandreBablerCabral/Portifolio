@@ -1,0 +1,207 @@
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#000;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+
+  padding:35px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:1000;
+
+  background:transparent;
+}
+
+.logo{
+  color:white;
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:2px;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:1rem;
+
+  transition:.3s ease;
+}
+
+nav a:hover{
+  opacity:.7;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+
+  width:100%;
+  height:100vh;
+
+  overflow:hidden;
+}
+
+/* VIDEO */
+
+.hero video{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  z-index:0;
+}
+
+/* OVERLAY */
+
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,.12);
+
+  z-index:1;
+}
+
+/* TEXTOS */
+
+.side-text{
+  position:absolute;
+
+  top:50%;
+  transform:translateY(-50%);
+
+  z-index:10;
+
+  display:flex;
+  flex-direction:column;
+
+  color:rgba(255,255,255,.90);
+
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:4px;
+
+  text-shadow:
+  0 0 10px rgba(255,255,255,.15),
+  0 0 30px rgba(255,255,255,.08);
+}
+
+.left-side{
+  left:120px;
+  text-align:left;
+}
+
+.right-side{
+  right:120px;
+  text-align:right;
+}
+
+.side-text span{
+  font-size:clamp(2rem,4vw,5rem);
+  line-height:.9;
+}
+
+/* TABLET */
+
+@media (max-width:1100px){
+
+  .left-side{
+    left:50px;
+  }
+
+  .right-side{
+    right:50px;
+  }
+
+  .side-text span{
+    font-size:clamp(1.8rem,4vw,3.5rem);
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  header{
+    padding:25px;
+  }
+
+  nav{
+    gap:15px;
+  }
+
+  .left-side{
+    left:20px;
+  }
+
+  .right-side{
+    right:20px;
+  }
+
+  .side-text span{
+    font-size:1.3rem;
+    letter-spacing:2px;
+  }
+
+}
+
+/* MOBILE PEQUENO */
+
+@media (max-width:480px){
+
+  .left-side{
+    left:15px;
+  }
+
+  .right-side{
+    right:15px;
+  }
+
+  .side-text span{
+    font-size:1rem;
+  }
+
+  .logo{
+    font-size:.9rem;
+  }
+
+  nav a{
+    font-size:.9rem;
+  }
+
+}
