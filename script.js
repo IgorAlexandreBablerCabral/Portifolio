@@ -1,127 +1,151 @@
 gsap.registerPlugin(ScrollTrigger);
 
-/* ==========================
-   ESTADOS INICIAIS
-========================== */
+window.addEventListener("DOMContentLoaded", () => {
 
-gsap.set(".about-content", {
-  opacity: 0,
-  y: 30
-});
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "+=1200",
+      scrub: 1
+    }
+  });
 
-gsap.set(".projects-title", {
-  opacity: 0,
-  y: 120
-});
+  tl.to(".remove-letter", {
+    opacity: 0,
+    x: 0,
+    stagger: 0.05,
+    ease: "none"
+  }, 0);
 
-/* ==========================
-   TIMELINE PRINCIPAL
-========================== */
+  tl.to(".i-letter", {
+    scale: 2.5,
+    color: "#ffffff",
+    textShadow: `
+      0 0 8px rgba(255,255,255,.6),
+      0 0 18px rgba(255,255,255,.4),
+      0 0 28px rgba(255,255,255,.2)
+    `,
+    ease: "none"
+  }, 0);
 
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "top top",
-    end: "+=2500",
-    scrub: 1.2, // 🔥 IMPORTANTE: suaviza e evita sumiço
-    pin: true
+  tl.to(".surname", {
+    x: -50,
+    color: "#ffffff",
+    ease: "none"
+  }, 0);
+
+  tl.to("nav a", {
+    color: "#ffffff",
+    ease: "none"
+  }, 0);
+
+  gsap.set(".side-text", {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)"
+  });
+
+  gsap.to(".left-text, .right-text", {
+    opacity: 0,
+    scale: 2.5,
+    filter: "blur(8px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "+=800",
+      scrub: 1
+    }
+  });
+
+  /* IMAGEM DO D: sobe e some */
+  gsap.to(".big-d-image", {
+    y: -250,
+    opacity: 0,
+    filter: "blur(8px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "+=800",
+      scrub: 1
+    }
+  });
+
+  /* D TRANSPARENTE: desce, dá zoom e some */
+  gsap.to(".big-d-mobile", {
+    y: 320,
+    scale: 2.2,
+    opacity: 0,
+    filter: "blur(8px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "+=800",
+      scrub: 1
+    }
+  });
+
+  /* EVELoper MOBILE: zoom e some */
+  gsap.to(".developer-mobile", {
+    scale: 2.8,
+    opacity: 0,
+    filter: "blur(8px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "+=800",
+      scrub: 1
+    }
+  });
+
+  const frame = document.getElementById("sequence-frame");
+
+  if (!frame) return;
+
+  const isMobile = window.innerWidth <= 768;
+
+  const basePath = isMobile
+    ? "assets/frames/Mobile/Notebook_Mobile_Version"
+    : "assets/frames/Desktop/NotebookFrame-jpg";
+
+  const frameCount = isMobile ? 212 : 197;
+
+  function getFrame(index) {
+    const num = String(index).padStart(3, "0");
+    return `${basePath}/ezgif-frame-${num}.jpg`;
   }
+
+  frame.src = getFrame(1);
+
+  for (let i = 1; i <= frameCount; i++) {
+    const img = new Image();
+    img.src = getFrame(i);
+  }
+
+  const sequence = {
+    frame: 1
+  };
+
+  gsap.to(sequence, {
+    frame: frameCount,
+    snap: "frame",
+    ease: "none",
+
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "+=1300",
+      scrub: 1,
+      pin: true
+    },
+
+    onUpdate: () => {
+      frame.src = getFrame(sequence.frame);
+    }
+  });
+
 });
-
-/* ==========================
-   LOGO MORPH
-========================== */
-
-tl.to(".remove-letter", {
-
-  opacity:0,
-
-  x:-20,
-
-  stagger:0.05
-
-}, 0.15);
-
-tl.to(".i-letter", {
-
-  scale: 2.5,
-
-  color: "#FFD700",
-
-  textShadow: `
-    0 0 8px rgba(255,215,0,.6),
-    0 0 18px rgba(255,215,0,.4),
-    0 0 28px rgba(255,215,0,.2)
-  `,
-
-  ease: "none"
-
-}, 0.15);
-
-tl.to(".surname", {
-
-  x:-45
-
-}, 0.25);
-
-/* ==========================
-   ZOOM VÍDEO
-========================== */
-
-tl.to(".hero video", {
-  scale: 4,
-  ease: "none"
-}, 0);
-
-/* ==========================
-   ESCURECIMENTO
-========================== */
-
-tl.to(".overlay", {
-  backgroundColor: "rgba(0,0,0,1)",
-  ease: "none"
-}, 0.2  );
-
-/* ==========================
-   TEXTOS LATERAIS
-========================== */
-
-tl.to(".side-text", {
-  opacity: 0,
-  y: 60
-}, 0);
-
-/* ==========================
-   ABOUT ENTRA E SAI (MAIS LIMPO)
-========================== */
-
-tl.to(".about-content", {
-  opacity: 1,
-  y: 0,
-  ease: "none"
-}, 0.45);
-
-tl.to(".about-content", {
-  opacity: 0,
-  y: -40,
-  ease: "none"
-}, 0.5);
-
-/* ==========================
-   PROJECTS ENTRA (FORÇADO E LIMPO)
-========================== */
-
-tl.to(".projects-title", {
-  opacity: 1,
-  y: -40,
-  ease: "power2.out"
-}, 0.75);
-
-/* ==========================
-   GARANTE VISIBILIDADE FINAL
-========================== */
-
-tl.set(".projects-title", {
-  opacity: 1,
-  y: 0
-}, 1);

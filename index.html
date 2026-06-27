@@ -2,94 +2,97 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igor Babler Portfolio</title>
 
-    <title>Igor Babler Portfolio</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
 <header>
   <div class="logo">
     <span class="i-letter">I</span>
-  <span class="igor-part">
-    <span class="remove-letter">G</span>
-    <span class="remove-letter">O</span>
-    <span class="remove-letter">R</span>
-  </span>
-    <span class="surname">
-    BABLER
+
+    <span class="igor-part">
+      <span class="remove-letter">G</span>
+      <span class="remove-letter">O</span>
+      <span class="remove-letter">R</span>
     </span>
 
-</div>
+    <span class="surname">BABLER</span>
+  </div>
 
   <nav>
-    <a href="https://github.com/SEU_GITHUB" target="_blank">
-      GitHub
-    </a>
-
-    <a href="https://linkedin.com/in/SEU_LINKEDIN" target="_blank">
-      LinkedIn
-    </a>
+    <a href="https://github.com/SEU_GITHUB" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/SEU_LINKEDIN" target="_blank">LinkedIn</a>
   </nav>
 </header>
 
 <section class="hero">
 
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
+  <img
+    id="sequence-frame"
+    class="sequence-frame"
+    src="assets/frames/Desktop/NotebookFrame-jpg/ezgif-frame-001.jpg"
+    alt="Notebook Animation"
   >
-    <source src="https://cdn.jsdelivr.net/gh/IgorAlexandreBablerCabral/Portifolio/Video%20Loop%20Certo.mp4" 
-type="video/mp4">
-  </video>
 
-  <div class="overlay"></div>
+  <div class="side-text left-text">
+    <span class="data">Data</span>
+    <span class="scientist">Scientist</span>
 
-  <div class="side-text left-side">
-    <span>Backend</span>
-    <span>Developer</span>
+    <span class="data-mobile">
+      <span>ata</span>
+    </span>
+
+    <span class="creative-mobile">Creative</span>
+
+    <span class="scientist-mobile">
+      <span>Scientist</span>
+    </span>
   </div>
 
-  <div class="side-text right-side">
-    <span>Data</span>
-    <span>Scientist</span>
-    <span>&</span>
-    <span>Analyst</span>
+  <!-- Grupo exclusivo do mobile -->
+  <div class="mobile-d-group">
+    <img
+      src="assets/images/D image.png"
+      alt="D"
+      class="big-d-image"
+    >
+
+    <span class="big-d-mobile">D</span>
+
+    <span class="developer-mobile">
+      <span>E</span>
+      <span>V</span>
+      <span>E</span>
+      <span>L</span>
+      <span>O</span>
+      <span>P</span>
+      <span>E</span>
+      <span>R</span>
+    </span>
   </div>
 
-  <div class="about-overlay">
+  <!-- Desktop -->
+  <div class="side-text right-text">
+    <span class="big-d">
+      <span class="big-d-text">D</span>
+    </span>
 
-    <div class="about-content">
-
-      <h2>About Me</h2>
-
-      <p>
-        Software Developer focused on Backend Development,
-        Data Science and Data Analytics.
-      </p>
-    
-
+    <div class="d-words">
+      <span class="developer">eveloper</span>
+      <span class="designer-desktop">esigner</span>
     </div>
-
   </div>
-  <div class="projects-title">
-      Projects
-    </div>
+
 </section>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<!-- Seu JS -->
 <script src="script.js"></script>
 
 </body>
