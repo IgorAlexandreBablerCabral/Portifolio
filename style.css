@@ -149,14 +149,65 @@
     text-align: left;
   }
 
-  .big-d {
-    display: inline-block;
-    position: relative;
-   font-size: clamp(8rem, 12vw, 14rem);
-    font-weight: 900;
-   line-height: 0.8;
-    color: rgba(255,255,255,.72);
-   text-shadow: 0 0 20px rgba(255,255,255,.08);
+  .big-d-text {
+
+    display:inline-block;
+    position:relative;
+
+    font-size:clamp(8rem,12vw,14rem);
+
+    font-weight:900;
+
+    line-height:.8;
+
+    color:rgba(255,255,255,.16);
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.45),
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.28)
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 2px 8px rgba(255,255,255,.08),
+        0 0 30px rgba(255,255,255,.06);
+
+    -webkit-text-stroke:1px rgba(255,255,255,.28);
+
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.60));
+  }
+
+  .developer-desktop{
+
+    position:relative;
+
+    background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.22) 12%,
+    rgba(255,255,255,.42) 28%,
+    rgba(255,255,255,.70) 55%,
+    rgba(255,255,255,.95) 100%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    -webkit-text-stroke:.8px rgba(255,255,255,.18);
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.10),
+        0 0 25px rgba(255,255,255,.05);
+
+    filter:drop-shadow(0 3px 8px rgba(0,0,0,.08));
   }
 
   .d-words {
@@ -219,8 +270,8 @@
     /* Esconde palavras normais no mobile */
     .data,
     .scientist,
-    .developer,
-    .designer-desktop,
+    .creative,
+    .developer-desktop,
     .big-d-text {
       display: none;
     }
@@ -502,3 +553,5 @@
       font-size: 0.9rem;
     }
   }
+
+  
