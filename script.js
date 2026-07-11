@@ -59,24 +59,10 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* IMAGEM DO D: sobe e some */
-  gsap.to(".big-d-image", {
-    y: -250,
-    opacity: 0,
-    filter: "blur(8px)",
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "+=800",
-      scrub: 1
-    }
-  });
-
-  /* D TRANSPARENTE: desce, dá zoom e some */
   gsap.to(".big-d-mobile", {
     y: 320,
-    scale: 2.2,
+    scaleX: 1.1,
+    scaleY: 1.5,
     opacity: 0,
     filter: "blur(8px)",
     ease: "none",
@@ -88,7 +74,20 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* EVELoper MOBILE: zoom e some */
+  gsap.to(".creative-mobile", {
+  y: 320,
+  opacity: 0,
+  filter: "blur(8px)",
+  ease: "none",
+
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "+=800",
+    scrub: 1
+  }
+});
+  
   gsap.to(".developer-mobile", {
     scale: 2.8,
     opacity: 0,
@@ -101,7 +100,7 @@ window.addEventListener("DOMContentLoaded", () => {
       scrub: 1
     }
   });
-
+  
   const frame = document.getElementById("sequence-frame");
 
   if (!frame) return;
