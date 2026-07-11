@@ -7,5 +7,6 @@ Desktop Version
 
 Mobile Version
 
-<img width="392" height="854" alt="image" src="https://github.com/user-attachments/assets/98d3ce53-898b-417a-bdb9-635b8bfdf7c6" />
+<img width="344" height="764" alt="image" src="https://github.com/user-attachments/assets/5c9791d3-0583-4cb9-8052-d9158835611f" />
+
 
