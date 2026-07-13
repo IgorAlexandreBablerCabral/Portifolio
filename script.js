@@ -282,22 +282,58 @@ if ("ResizeObserver" in window && bigD) {
     frame: 1
   };
 
-  gsap.to(sequence, {
-    frame: frameCount,
-    snap: "frame",
-    ease: "none",
 
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "+=1300",
-      scrub: 1,
-      pin: true
-    },
+  const yellowTransition =
+  document.querySelector(".yellow-transition");
 
-    onUpdate: () => {
-      frame.src = getFrame(sequence.frame);
-    }
+const yellowTransitionStart = 0.98;
+
+/*
+ * Garante que o primeiro frame esteja visível
+ * antes de o ScrollTrigger começar.
+ */
+sequence.frame = 1;
+frame.src = getFrame(1);
+
+if (yellowTransition) {
+  gsap.set(yellowTransition, {
+    opacity: 0
   });
+}
+
+gsap.to(sequence, {
+  frame: frameCount,
+  snap: "frame",
+  ease: "none",
+
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "+=1500",
+    scrub: 1,
+    pin: true,
+    invalidateOnRefresh: true,
+
+    onUpdate: (self) => {
+      if (!isMobile && yellowTransition) {
+        const yellowOpacity = gsap.utils.clamp(
+          0,
+          1,
+          (self.progress - yellowTransitionStart) /
+          (1 - yellowTransitionStart)
+        );
+
+        gsap.set(yellowTransition, {
+          opacity: yellowOpacity
+        });
+      }
+    }
+  },
+
+  onUpdate: () => {
+    const currentFrame = Math.round(sequence.frame);
+    frame.src = getFrame(currentFrame);
+  }
+});
 
 });

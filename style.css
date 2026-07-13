@@ -5,8 +5,13 @@
     box-sizing: border-box;
   }
 
+  /* Variáveis globais */
+  :root {
+  --portfolio-yellow: #c8a000;
+  }
+
   body {
-    background: #000;
+    background:#000;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -221,6 +226,49 @@
     line-height: 1;
    color: rgba(255,255,255,.72);
   }
+
+  /*Paradas do About Me */
+ .yellow-transition {
+    display: none;
+  }  
+  /*Camada de bloqueio limite para execução do gradiente versão Desktop*/
+  @media (min-width: 769px) {
+  .yellow-transition {
+    display: block;
+    position: absolute;
+
+    /* Ultrapassa a hero em 2px para evitar linhas */
+    inset: -2px;
+
+    background: var(--portfolio-yellow);
+    opacity: 0;
+
+    z-index: 100;
+    pointer-events: none;
+
+    will-change: opacity;
+  }
+
+  .yellow-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    /*
+     * Sobreposição mínima para não surgir
+     * nenhuma divisão entre as seções.
+     */
+    margin-top: -2px;
+
+    background: var(--portfolio-yellow);
+    overflow: hidden;
+
+    z-index: 2;
+  }
+}
+
+  
 
   /* ESCONDE VERSÕES MOBILE NO DESKTOP */
 
