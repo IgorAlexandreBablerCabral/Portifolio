@@ -286,7 +286,8 @@ if ("ResizeObserver" in window && bigD) {
   const yellowTransition =
   document.querySelector(".yellow-transition");
 
-const yellowTransitionStart = 0.98;
+const yellowTransitionStart = 
+  isMobile ? 0.98: 0.99;
 
 /*
  * Garante que o primeiro frame esteja visível
@@ -315,7 +316,7 @@ gsap.to(sequence, {
     invalidateOnRefresh: true,
 
     onUpdate: (self) => {
-      if (!isMobile && yellowTransition) {
+      if (yellowTransition) {
         const yellowOpacity = gsap.utils.clamp(
           0,
           1,

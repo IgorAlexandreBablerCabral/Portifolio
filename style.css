@@ -7,7 +7,8 @@
 
   /* Variáveis globais */
   :root {
-  --portfolio-yellow: #c8a000;
+  --portfolio-yellow-desktop: #c8a000;
+  --portfolio-yellow-mobile: #e2ae0a;
   }
 
   body {
@@ -233,14 +234,14 @@
   }  
   /*Camada de bloqueio limite para execução do gradiente versão Desktop*/
   @media (min-width: 769px) {
-  .yellow-transition {
+  .yellow-transition{
     display: block;
     position: absolute;
 
     /* Ultrapassa a hero em 2px para evitar linhas */
     inset: -2px;
 
-    background: var(--portfolio-yellow);
+    background: var(--portfolio-yellow-desktop);
     opacity: 0;
 
     z-index: 100;
@@ -250,21 +251,7 @@
   }
 
   .yellow-section {
-    position: relative;
-
-    width: 100%;
-    min-height: 100vh;
-
-    /*
-     * Sobreposição mínima para não surgir
-     * nenhuma divisão entre as seções.
-     */
-    margin-top: -2px;
-
-    background: var(--portfolio-yellow);
-    overflow: hidden;
-
-    z-index: 2;
+    background: var(--portfolio-yellow-desktop);
   }
 }
 
@@ -694,6 +681,22 @@
   .designer-mobile span {
     display: block;
   }
+
+  .yellow-transition {
+    display: block;
+    position: absolute;
+    inset: -2px;
+    background: var(--portfolio-yellow-mobile);
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    will-change: opacity;
+  }
+
+  .yellow-section {
+    background: var(--portfolio-yellow-mobile);
+  }
+
 }
 
 @keyframes greenPixelRain {
@@ -711,6 +714,8 @@
       0 120px;
   }
 }
+
+
     
     
   /* CELULAR PEQUENO */
