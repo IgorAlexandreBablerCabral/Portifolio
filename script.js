@@ -337,4 +337,96 @@ gsap.to(sequence, {
   }
 });
 
+  /*
+ * ========================================
+ * ABOUT ME — ENTRADA DO TÍTULO
+ * ========================================
+ */
+
+  const aboutHeading =
+    document.querySelector(".about-heading");
+
+  const aboutTitle =
+    document.querySelector(".about-title");
+
+  const aboutDivider =
+    document.querySelector(".about-divider");
+
+  if (
+    aboutHeading &&
+    aboutTitle &&
+    aboutDivider
+  ) {
+    /*
+    * Estado inicial.
+    */
+    gsap.set(aboutHeading, {
+      autoAlpha: 0
+    });
+
+    gsap.set(aboutTitle, {
+      scale: 0.94,
+      filter: "blur(12px)"
+    });
+
+    gsap.set(aboutDivider, {
+      autoAlpha: 0,
+      scaleX: 0
+    });
+
+    const aboutTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".yellow-section",
+
+        /*
+        * Começa quando a seção amarela
+        * entra pela parte inferior da tela.
+        */
+        start: "top 80%",
+
+        /*
+        * Termina quando a seção está
+        * próxima do centro da tela.
+        */
+        end: "top 25%",
+
+        scrub: 1,
+
+        invalidateOnRefresh: true
+      }
+    });
+
+    aboutTimeline
+      .to(
+        aboutHeading,
+        {
+          autoAlpha: 1,
+          duration: 1,
+          ease: "none"
+        },
+        0
+      )
+
+      .to(
+        aboutTitle,
+        {
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 1,
+          ease: "none"
+        },
+        0
+      )
+
+      .to(
+        aboutDivider,
+        {
+          autoAlpha: 1,
+          scaleX: 1,
+          duration: 0.5,
+          ease: "none"
+        },
+        0.45
+      );
+}
 });

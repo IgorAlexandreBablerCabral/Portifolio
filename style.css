@@ -229,7 +229,107 @@
   }
 
   /*Paradas do About Me */
- .yellow-transition {
+  
+  /* ========================================
+   ABOUT ME
+======================================== */
+
+  .yellow-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background: var(--portfolio-yellow-desktop);
+  }
+
+  .about-container {
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+
+  .about-heading {
+    position: absolute;
+    z-index: 20;
+
+    opacity: 0;
+    visibility: hidden;
+
+    will-change:
+      opacity,
+      filter,
+      transform;
+  }
+
+  .about-title {
+  margin: 0;
+
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 900;
+  line-height: 0.88;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  /* Preto translúcido com reflexo branco */
+  background: linear-gradient(
+    135deg,
+    rgba(189, 188, 188, 0.959) 0%,
+    rgba(252, 252, 252, 0.9) 30%,
+    rgba(80, 80, 80, 0.4) 46%,
+    rgba(255, 255, 255, 0.36) 51%,
+    rgba(255, 255, 255, 0.15) 57%,
+    rgba(206, 159, 5, 0.36) 72%,
+    rgba(238, 185, 12, 0.76) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Contorno discreto somente no Sobre Mim */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.16),
+    0 4px 12px rgba(0, 0, 0, 0.12);
+
+  filter:
+    drop-shadow(0 8px 18px rgba(0, 0, 0, 0.10))
+    contrast(1.04);
+
+  user-select: none;
+
+  will-change:
+    opacity,
+    transform,
+    filter;
+  }
+
+  .about-divider {
+    height: 3px;
+
+    background: rgba(0, 0, 0, 0.52);
+
+    opacity: 0;
+    transform: scaleX(0);
+
+    will-change:
+      opacity,
+      transform;
+  }
+
+  /*
+  * Por enquanto, deixaremos o restante
+  * da seção escondido.
+  */
+  .about-content {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .yellow-transition {
     display: none;
   }  
   /*Camada de bloqueio limite para execução do gradiente versão Desktop*/
@@ -250,8 +350,47 @@
     will-change: opacity;
   }
 
+  
   .yellow-section {
-    background: var(--portfolio-yellow-desktop);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .about-container {
+  width: min(1400px, 90vw);
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  display: block;
+}
+
+  /*
+  * Desktop:
+  * loc na esquerda e maior.
+  */
+  .about-heading {
+    left: -10%;
+    top: 33%;
+
+    transform: translateY(-50%);
+
+    text-align: left;
+  }
+
+  .about-title {
+    font-size: clamp(5.5rem, 9vw, 10.5rem);
+    letter-spacing: clamp(1px, 0.25vw, 5px);
+  }
+
+  .about-divider {
+    width: clamp(160px, 14vw, 250px);
+
+    margin-top: 26px;
+
+    transform-origin: left center;
   }
 }
 
@@ -275,6 +414,15 @@
 
   .mobile-d-group {
   display: none;
+  }
+
+  .about-container {
+  position: relative;
+
+  width: min(1400px, 90vw);
+  min-height: 100vh;
+
+  margin: 0 auto;
   }
 
   /* MOBILE */
@@ -697,6 +845,55 @@
     background: var(--portfolio-yellow-mobile);
   }
 
+  .yellow-section {
+  min-height: 100svh;
+
+  background: var(--portfolio-yellow-mobile);
+  }
+
+  .about-container {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    margin: 0;
+    padding: 0;
+
+    display: block;
+  }
+
+  /*
+  * Mobile:
+  * centralizado horizontalmente
+  * e um pouco acima do centro.
+  */
+  .about-heading {
+    left: 50%;
+    top: 35%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    padding: 0 18px;
+
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: clamp(2.7rem, 12vw, 5.2rem);
+    letter-spacing: clamp(1px, 0.6vw, 3px);
+  }
+
+  .about-divider {
+    width: 105px;
+    height: 3px;
+
+    margin: 20px auto 0;
+
+    transform-origin: center;
+  }
+
 }
 
 @keyframes greenPixelRain {
@@ -714,9 +911,7 @@
       0 120px;
   }
 }
-
-
-    
+      
     
   /* CELULAR PEQUENO */
 
