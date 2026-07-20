@@ -292,8 +292,8 @@
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
 
   text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.16),
-    0 4px 12px rgba(0, 0, 0, 0.12);
+    1px 0 1px rgba(255,245,225,.12),
+    2px 0 3px rgba(255,235,190,.08);
 
   filter:
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.10))
@@ -372,7 +372,7 @@
   * loc na esquerda e maior.
   */
   .about-heading {
-    left: -10%;
+    left: 0%;
     top: 33%;
 
     transform: translateY(-50%);
@@ -381,7 +381,7 @@
   }
 
   .about-title {
-    font-size: clamp(5.5rem, 9vw, 10.5rem);
+    font-size: clamp(3.5rem, 8vw, 7rem);
     letter-spacing: clamp(1px, 0.25vw, 5px);
   }
 
