@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -88,6 +91,13 @@
     </div>
   </div>
 
+<button class="enter-btn" aria-label="Entrar no site">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <polygon points="6,3 20,12 6,21" />
+  </svg>
+  <span>Entrar</span>
+</button>
+
 </section>
 
 <section class="yellow-section">
@@ -97,36 +107,347 @@
       
       <div class="about-heading">
 
-        <h2
-          class="about-title"
-          data-i18n="about.title">
-          Sobre Mim
-        </h2>
+  <div class="about-title-row">
+    <h2 class="about-title" data-i18n="aboutTitle">
+      Sobre Mim
+    </h2>
 
-        <div
-          class="about-divider"
-          aria-hidden="true">
-        </div>
+    <div class="language-selector" aria-label="Selecionar idioma">
 
-        </div>
-          
+      <button
+        class="language-button active"
+        type="button"
+        data-language="pt"
+        aria-label="Português"
+        title="Português"
+      >
+        <img class="language-flag"
+             src="https://flagcdn.com/w40/br.png"
+             alt="Português">
+      </button>
 
-        <div class="about-content">
-          <p class="about-description" data-i18n="about.description">
-            Lorem Teste
-          </p>
+      <button
+        class="language-button"
+        type="button"
+        data-language="en"
+        aria-label="English"
+        title="English"
+      >
+        <img class="language-flag"
+             src="https://flagcdn.com/w40/gb.png"
+             alt="English">
+      </button>
 
-          <div class="language-selector">
-            <!-- Bandeiras-->
-          </div>
-        </div>
+      <button
+        class="language-button"
+        type="button"
+        data-language="es"
+        aria-label="Español"
+        title="Español"
+      >
+        <img class="language-flag"
+             src="https://flagcdn.com/w40/es.png"
+             alt="Español">
+      </button>
 
-</div>   
+      <button
+        class="language-button"
+        type="button"
+        data-language="sv"
+        aria-label="Svenska"
+        title="Svenska"
+      >
+        <img class="language-flag"
+             src="https://flagcdn.com/w40/se.png"
+             alt="Svenska">
+      </button>
+
+    </div>
+  
+  </div>
+
+  <div class="about-divider"></div>
+
+</div>
+
+<div class="about-first-text">
+  <p data-i18n="aboutIntro">
+    Meu nome é Igor Alexandre Babler Cabral, brasileiro e apaixonado por
+    tecnologia, design e inovação. Minha trajetória profissional me levou por
+    diferentes áreas da tecnologia, passando pela análise de dados na equipe de
+    engenharia de satélites da Sencinet, pelo desenvolvimento de soluções web na
+    Sheep Ideas e pela gestão de atividades e pessoas na Toledo do Brasil. Essa
+    combinação de experiências me proporcionou uma visão versátil, unindo
+    pensamento analítico, desenvolvimento de software e liderança. Atualmente,
+    dedico meu tempo ao desenvolvimento de projetos pessoais, onde experimento
+    novas tecnologias, aperfeiçoo minhas habilidades e transformo ideias em
+    experiências digitais que refletem minha paixão por criar soluções modernas
+    e bem construídas.
+  </p>
+</div>
+
+<div class="about-image-mobile">
+  <img
+    src="assets/images/Mobile Glass Image.png"
+    alt="Composição visual representando projetos criativos e tecnológicos"
+  >
+</div>
+
+<div class="about-projects-row">
+
+  <div class="about-second-text">
+    <p data-i18n="aboutProjects">
+      Minha paixão por tecnologia também está profundamente conectada ao meu lado
+      criativo. Tenho grande interesse por música, ambientação sonora, modelagem
+      3D e edição de vídeos e imagens, áreas que frequentemente incorporo aos meus
+      trabalhos para criar experiências mais completas e envolventes. Meus
+      projetos variam desde o desenvolvimento de sistemas preditivos utilizando
+      inteligência artificial e a construção de bancos de dados estruturados até
+      iniciativas mais leves e descontraídas, como uma página voltada ao ensino
+      de T.I. com uma abordagem humorística e acessível. Também exploro o
+      desenvolvimento de jogos independentes, combinando programação, narrativa,
+      identidade visual e design sonoro. Independentemente da tecnologia, do
+      formato ou da complexidade, o mais importante para mim é manter sempre
+      acesa a paixão por transformar ideias em projetos, experimentar novas
+      possibilidades e continuar aprendendo durante cada etapa do processo.
+    </p>
+  </div>
+
+  <div class="about-image-desktop">
+    <img
+      src="assets/images/Glass Backgorund desktop png.png"
+      alt="Composição visual representando projetos criativos e tecnológicos"
+    >
+  </div>
+
+  </div>
+
+  <div class="music-player">
+
+  <span class="player-title" data-i18n="playerTitle">
+    Working Lobby — Babler
+  </span>
+
+  <div class="player-controls">
+
+    <button class="play-pause-btn" aria-label="Play/Pause">
+      <span class="icon-play">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <polygon points="6,3 20,12 6,21" />
+        </svg>
+      </span>
+      <span class="icon-pause">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <rect x="5" y="3" width="4" height="18" />
+          <rect x="15" y="3" width="4" height="18" />
+        </svg>
+      </span>
+    </button>
+
+    <div class="progress-track">
+      <div class="progress-fill"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<audio id="bg-music" loop preload="auto">
+  <source src="assets/audio/working-lobby.mp3" type="audio/mpeg">
+</audio>
+
+<div class="about-third-text">
+  <p data-i18n="aboutEducation">
+    Sou formado em Ciência de Dados pela Escola Britânica de Artes Criativas (EBAC) e atualmente curso Análise e Desenvolvimento de Sistemas na Universidade Metrocamp, em Campinas (São Paulo). Meu objetivo é atuar na área de dados, adquirindo experiência e bagagem suficientes para, no futuro, me tornar um gerente de projetos — unindo aquilo que mais me move e motiva: a criação e o desenvolvimento de projetos que geram impacto real. Abaixo, você pode conferir alguns dos meus projetos, tanto concluídos quanto em desenvolvimento.
+  </p>
+</div>
+
 </section>
+
+<!-- GALAXY DIVIDER -->
+<div class="galaxy-divider">
+  <img
+    src="assets/images/cardboard-divider-desktop.png"
+    alt="Transição papelão"
+    class="divider-img divider-desktop"
+  >
+  <img
+    src="assets/images/cardboard-divider-mobile.png"
+    alt="Transição papelão"
+    class="divider-img divider-mobile"
+  >
+</div>
+
+<!-- PROJECTS SECTION -->
+<section class="projects-section">
+
+  <video
+    class="galaxy-bg"
+    src="assets/video/galaxy.webm"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+
+  <div class="galaxy-overlay"></div>
+
+  <!-- GALERIA -->
+  <div class="gallery-container">
+
+    <h2 class="gallery-title" data-i18n="projectsTitle">
+      Projetos
+    </h2>
+
+    <div class="gallery-track">
+
+      <button class="gallery-arrow gallery-arrow-left" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <polyline points="15,18 9,12 15,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="gallery-viewport">
+        <div class="gallery-slider">
+
+  <div class="gallery-card" data-project="1">
+    <video
+      class="card-media"
+      src="assets/video/Rework_Raedme.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+    <span class="card-label">ReadMe Newsletter</span>
+  </div>
+
+  <div class="gallery-card" data-project="2">
+    <video
+      class="card-media"
+      src="assets/video/Rework_Grafico.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+    <span class="card-label">P.C.S - Predictive Chart System</span>
+  </div>
+
+  <div class="gallery-card" data-project="3">
+    <video
+      class="card-media"
+      src="assets/video/Portfolio-3-video.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+    <span class="card-label">Input Relational DataBase</span>
+  </div>
+
+  <div class="gallery-card" data-project="4">
+    <video
+      class="card-media"
+      src="assets/video/Isaura Psico.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+    <span class="card-label">Web Projects</span>
+  </div>
+
+  <div class="gallery-card" data-project="5">
+    <video
+      class="card-media"
+      src="assets/video/Portfolio-5-video.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+    <span class="card-label">Other Projects</span>
+  </div>
+
+</div>
+      </div>
+
+      <button class="gallery-arrow gallery-arrow-right" aria-label="Próximo">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <polyline points="9,6 15,12 9,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <div class="gallery-dots"></div>
+
+  </div>
+
+  <!-- DETALHE DO PROJETO -->
+  <div class="project-detail" aria-hidden="true">
+
+    <button class="back-to-gallery" aria-label="Voltar à galeria">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+        <polyline points="15,18 9,12 15,6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span data-i18n="backToGallery">Voltar</span>
+    </button>
+
+    <div class="detail-content">
+
+      <h3 class="detail-title">Título do Projeto</h3>
+
+      <div class="detail-left">
+        <div class="detail-tech">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="detail-images">
+          <img
+            src="assets/images/projects/project-1-detail.jpg"
+            alt="Detalhe do Projeto"
+            class="detail-image"
+          >
+        </div>
+      </div>
+
+      <div class="detail-text-side">
+        <p class="detail-description">
+          Descrição detalhada do projeto aqui.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p class="footer-text" data-i18n="footerText">
+    Caso queira iniciar uma parceria, entre em contato
+  </p>
+  <a
+    href="https://linkedin.com/in/SEU_LINKEDIN"
+    target="_blank"
+    class="footer-linkedin"
+    aria-label="LinkedIn"
+  >
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  </a>
+</footer>
+       
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 <script src="script.js"></script>
 
 </body>
