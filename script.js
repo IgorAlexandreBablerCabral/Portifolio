@@ -14,35 +14,35 @@ const projectsData = {
       description:
         "Readme é um projeto em desenvolvimento que investiga o quão atrativo uma leitura pode ser para uma pessoa, considerando seus interesses pessoais e padrões de consumo de conteúdo. O sistema é composto por três ambientes isolados que trabalham em conjunto. O primeiro ambiente realiza a coleta de dados do usuário — frequência de leitura, interesses pessoais e preferências — e o submete a testes que calculam métricas de velocidade de leitura, estabelecendo uma base quantitativa como indicador principal de interesse por conteúdo lido. O segundo ambiente é um módulo de treinamento de Inteligência Artificial, alimentado por livros renomeados sobre leitura e interesse por literatura, que aprende a apresentar leituras de forma personalizada para cada usuário, utilizando métricas matemáticas internas e adaptáveis. O terceiro ambiente é um cenário de leituras rápidas que utiliza Web Scraping em diversos blogs online para expor o usuário a conteúdos alinhados com seus interesses declarados no primeiro ambiente. As interações do usuário com esses textos atualizam continuamente as métricas da IA, gerando dados sobre a personalidade de leitura — úteis para criar perfis semelhantes para outros usuários com padrões parecidos — e sobre o desempenho por categoria de interesse. Os dados refinados retornam ao segundo ambiente, criando correlações que permitem ao sistema prever quais conteúdos oferecer, em que tom e estilo de escrita. O objetivo final é a criação de um aplicativo de jornal inteligente que entregue ao leitor apenas as informações que realmente importam, no formato que mais lhe engaja.",
       tech: ["Python", "Machine Learning", "Web Scraping"],
-      image: "assets/images/BrainStorm Read.me.png"
+      image: "assets/images/brainstorm-readme.png"
     },
     2: {
       title: "P.C.S. — Sistema Preditivo de Gráficos",
       description:
         "Um sistema de análise em tempo real desenvolvido para interpretar gráficos financeiros com base em métricas gráficas e financeiras. O sistema combina a análise dos gráficos com um sistema de Web Scraping em tempo real aplicado a blogs financeiros e fontes relevantes, coletando informações relacionadas ao ativo analisado. Essas informações são processadas em conjunto com os dados gráficos, proporcionando uma análise mais abrangente e contribuindo para avaliações preditivas baseadas tanto em métricas quantitativas quanto nas informações financeiras mais recentes.",
       tech: ["Python", "TensorFlow", "Pandas"],
-      image: "assets/images/Brainstrom P.C.S..png"
+      image: "assets/images/brainstorm-p-c-s.png"
     },
     3: {
       title: "Sistema de Secretaria — Projeto em C++",
       description:
               "Sistema de Secretaria Escolar desenvolvido em C++ com o objetivo didático de reforçar a estruturação da linguagem, promover boas práticas de desenvolvimento e integrar conceitos essenciais da engenharia de software. O sistema permite a adição de usuários com informações como nome, sobrenome, CPF e cargo — abrangendo perfis como alunos, professores e funcionários. Oferece funcionalidades de consulta de registros para análise de dados, exclusão de usuários e organização por tags e atributos atrelados a cada perfil. A interface funciona via linha de comando, com entrada e saída de dados focada em usabilidade. O projeto trabalha conceitos fundamentais como modularização e organização de código em C++, criação e leitura de arquivos para simular um banco de dados, estruturas de decisões e laços de repetição, princípios básicos de arquitetura de software com separação de camadas e responsabilidades, além da construção de fluxogramas para representar a lógica do sistema e a elaboração de um roadmap evolutivo com releases simuladas para acompanhamento de stakeholders.",
       tech: ["C++", "CLI", "Arquivo de Dados"],
-      image: "assets/images/Brainstorm Input Data.png"
+      image: "assets/images/brainstorm-input-data.png"
     },
     4: {
       title: "Projetos Web — Desenvolvimento Criativo",
       description:
         "Meus projetos web são construídos com um olhar voltado para a imersão e a experiência do usuário. A cada novo projeto, busco evoluir e trazer mais sentimento ao que crio — cada detalhe visual, cada transição e cada movimentação são pensados para gerar uma conexão genuína com quem acessa. Na maioria dos meus projetos, utilizo vídeos criados no After Effects para a produção de movimentações brutas que servem como base para as animações finais. Esses vídeos passam por um processo de posicionamento e conceituação de animação, onde defino timing, direção e fluidez para que cada elemento se comporte de forma coerente dentro da interface. O refinamento gráfico e a melhoria visual dos projetos são realizados através de Inteligências Artificiais locais, as quais aloquei na minha própria máquina. Essa escolha se dá tanto por questões financeiras — evitando custos recorrentes com serviços na nuvem — quanto pelo ganho de conhecimento adquirido ao explorar o funcionamento local de modelos de IA, entendendo seus limites, possibilidades e como extraí-los o melhor resultado para cada cenário.",
       tech: ["HTML", "CSS", "JavaScript", "After Effects", "IA Local"],
-      image: "assets/images/BrainStorm WebDesign.png"
+      image: "assets/images/brainstorm-web-design.png"
     },
     5: {
       title: "Projetos Diversos — Hardware, Fork, The Cure & Comunidade",
       description:
         "Além do desenvolvimento web, possuo projetos que envolvem hardware, jogos e comunidade. Como técnico mecatrônico formado, tenho facilidade com eletrônica e programação embarcada. Meu projeto de hardware mais recente é uma câmera com Arduino integrado capaz de identificar se uma pessoa está de pé, sentada ou deitada — com o intuito de comercializar essa solução para casas de repousos que cuidam de idosos, oferecendo monitoramento inteligente e acessível. Também mantenho o portal de informações Fork Nosso de Cada Dia, onde compartilho ensinamentos breves sobre tecnologia para a comunidade, e o canal no YouTube de mesmo nome, voltado para projetos mais extensos, debates sobre assuntos que demandam maior aprofundamento e ensinamentos relevantes para a comunidade de T.I. Atualmente estou desenvolvendo um survival horror game nas horas vagas chamado The Cure. O jogo é protagonizado por uma mulher que vive com esquizofrenia e é sequestrada por um homem que insiste que ela está doente e precisa de uma cura. Após o sequestro, ela se encontra trancada em um quarto de uma casa de horrores em um parque de diversões abandonado e descobre que o homem já havia sequestrado outras três mulheres: uma portadora de deficiência visual que a deixava parcialmente cega, uma mulher com aspecto autista e outra que sofria de bipolaridade. Todas acreditavam ter sido sequestradas por um lunático que se referia à sua condição com tom preconceituoso, mas estavam prestes a descobrir que a doença à qual ele se referia era na verdade uma maldição espiritual que a maioria delas não sabia possuir. O jogo tem como objetivo trazer, de forma poética, a inversão da visão negativa que a sociedade impõe através de preconceitos capacitistas, transformando essas particularidades em habilidades sobrenaturais únicas em cada personagem. Cada uma vive em um universo de horror espiritual construído por cenários baseados em projeções de complexos fóbicos de suas próprias mentes, oprimidas pela vivência do preconceito social. Eu amo fazer minhas ideias impactarem pessoas, acredito que a mudança dentro de nós só pode ser aceita se ela é primeiramente vivida, por isso me empenho tanto em trazer ambientes com maior otimização, melhores visuais, melhores ambientações sonoras, cada vez melhores em cada projeto que crio. Para mim, não é só sobre performance — é sobre o sentimento do usuário, seja um cliente, seja um comprador, seja um seguidor em uma rede social, se forem impactados da maneira correta, eu vou saber que meu dever foi cumprido.",
       tech: ["Arduino", "C++", "Hardware", "Game Design", "YouTube"],
-      image: "assets/images/BrainStrom Outros Projetos.png"
+      image: "assets/images/brainstorm-outros-projetos.png"
     },
   },
 
@@ -52,35 +52,35 @@ const projectsData = {
       description:
         "Readme is an ongoing project that explores how engaging reading can be for an individual, taking into account personal interests and content consumption patterns. The system consists of three isolated environments working in synergy. The first environment collects user data — reading frequency, personal interests, and preferences — and subjects them to tests that calculate reading speed metrics, establishing a quantitative baseline as the primary indicator of interest in written content. The second environment is an Artificial Intelligence training module, fed by renowned books on reading and literary interest, that learns how to present readings in a personalized way for each user using internal and adaptive mathematical metrics. The third environment is a fast-reading scenario that uses Web Scraping across multiple online blogs to expose the user to content aligned with their declared interests from the first environment. User interactions with these texts continuously update the AI metrics, generating data on reading personality — useful for creating similar profiles for users with comparable patterns — and on performance by interest category. The refined data flows back to the second environment, creating correlations that allow the system to predict which content to offer, in what tone and writing style. The ultimate goal is the creation of an intelligent news app that delivers to the reader only the information that truly matters, in the format that engages them the most.",
       tech: ["Python", "Machine Learning", "Web Scraping"],
-      image: "assets/images/BrainStorm Read.Me.png"
+      image: "assets/images/brainstorm-readme.png"
     },
     2: {
       title: "P.C.S Predictive Chart Sistem",
       description:
         "A real-time analytical system designed to interpret financial charts based on technical and financial metrics. The system combines graphical analysis with real-time web scraping from financial blogs and relevant sources, collecting information about the analyzed asset. These market insights are processed alongside the chart data to provide a more comprehensive analysis and support predictive evaluations based on both quantitative metrics and current financial information.",
       tech: ["Python", "TensorFlow", "Pandas"],
-      image: "assets/images/Brainstrom P.C.S..png"
+      image: "assets/images/brainstorm-p-c-s.png"
     },
     3: {
       title: "School Secretary System — C++ Project",
       description:
         "A School Secretary System developed in C++ with the didactic goal of reinforcing language structuring, promoting good development practices, and integrating essential software engineering concepts. The system allows adding users with information such as first name, last name, ID number, and role — covering profiles like students, teachers, and staff. It offers record querying for data analysis, user deletion, and organization through tags and attributes linked to each profile. The interface operates via command line, with input and output focused on usability. The project covers fundamental concepts such as modularization and code organization in C++, file creation and reading to simulate a database, decision structures and loops, basic software architecture principles with separation of layers and responsibilities, as well as the construction of flowcharts to represent the system logic and the development of an evolutionary roadmap with simulated releases for stakeholder tracking.",
       tech: ["C++", "CLI", "File Database"],
-      image: "assets/images/Brainstorm Input Data.png"
+      image: "assets/images/brainstorm-input-data.png"
     },
     4: {
       title: "Web Projects — Creative Development",
       description:
         "My web projects are built with a focus on immersion and user experience. With each new project, I strive to evolve and bring more feeling into what I create — every visual detail, every transition, and every movement is designed to forge a genuine connection with the viewer. In most of my projects, I use videos created in After Effects to produce raw animations that serve as the foundation for the final motion design. These videos go through a positioning and animation concept process, where I define timing, direction, and fluidity so that each element behaves coherently within the interface. The visual refinement and graphic enhancement of the projects are carried out through local Artificial Intelligence models, which I have deployed on my own machine. This approach is driven both by financial considerations — avoiding recurring costs with cloud services — and by the knowledge gained from exploring how AI models operate locally, understanding their limitations, possibilities, and how to extract the best results for each scenario.",
       tech: ["HTML", "CSS", "JavaScript", "After Effects", "Local AI"],
-      image: "assets/images/BrainStorm WebDesign.png"
+      image: "assets/images/brainstorm-web-design.png"
     },
     5: {
       title: "Other Projects — Hardware, Fork, The Cure & Community",
       description:
         "Beyond web development, I have projects involving hardware, games, and community. As a graduated mechatronics technician, I have a natural ease with electronics and embedded programming. My most recent hardware project is an Arduino-integrated camera capable of identifying whether a person is standing, sitting, or lying down — with the goal of commercializing this solution for elderly care homes, offering intelligent and accessible monitoring. I also maintain the information portal Fork Nosso de Cada Dia, where I share brief technology lessons for the community, and the YouTube channel of the same name, focused on more in-depth projects, debates on topics that require deeper discussion, and relevant teachings for the IT community. I am currently developing a survival horror game in my spare time called The Cure. The game is protagonized by a woman living with schizophrenia who is kidnapped by a man who insists she is sick and needs a cure. After the abduction, she finds herself locked in a room inside a haunted house in an abandoned amusement park and discovers that the man had already kidnapped three other women: one with a visual impairment that left her partially blind, one woman on the autism spectrum, and another who suffered from bipolar disorder. They all believed they had been kidnapped by a lunatic who referred to their conditions with a prejudiced tone, but they were about to discover that the disease he referred to was actually a spiritual curse that most of them did not know they possessed. The game aims to poetically invert the negative perception that society imposes through ableist prejudice, transforming these particularities into unique supernatural abilities for each character. Each one lives in a spiritual horror universe built from scenarios based on projections of phobic complexes from their own minds, oppressed by the experience of social prejudice. I love making my ideas impact people. I believe that change within us can only be accepted if it is first lived, which is why I work so hard to bring environments with greater optimization, better visuals, better sound design — always better with each project I create. For me, it is not just about performance — it is about the user's feeling, whether a client, a buyer, or a follower on social media. If they are impacted the right way, I know my duty has been fulfilled.",
       tech: ["Arduino", "C++", "Hardware", "Game Design", "YouTube"],
-      image: "assets/images/BrainStrom Outros Projetos.png"
+      image: "assets/images/brainstorm-outros-projetos.png"
     },
   },
 
@@ -90,35 +90,35 @@ const projectsData = {
       description:
         "Readme es un proyecto en desarrollo que investiga lo atractiva que puede ser una lectura para una persona, teniendo en cuenta sus intereses personales y patrones de consumo de contenido. El sistema se compone de tres entornos aislados que trabajan en conjunto. El primer entorno recopila datos del usuario — frecuencia de lectura, intereses personales y preferencias — y lo somete a pruebas que calculan métricas de velocidad de lectura, estableciendo una base cuantitativa como indicador principal de interés por el contenido leído. El segundo entorno es un módulo de entrenamiento de Inteligencia Artificial, alimentado por libros reconocidos sobre lectura e interés literario, que aprende a presentar lecturas de forma personalizada para cada usuario utilizando métricas matemáticas internas y adaptables. El tercer entorno es un escenario de lecturas rápidas que utiliza Web Scraping en diversos blogs en línea para exponer al usuario a contenidos alineados con sus intereses declarados en el primer entorno. Las interacciones del usuario con estos textos actualizan continuamente las métricas de la IA, generando datos sobre la personalidad de lectura — útiles para crear perfiles similares para usuarios con patrones comparables — y sobre el rendimiento por categoría de interés. Los datos refinados regresan al segundo entorno, creando correlaciones que permiten al sistema predecir qué contenidos ofrecer, en qué tono y estilo de escritura. El objetivo final es la creación de una aplicación de periódico inteligente que entregue al lector solo la información que realmente importa, en el formato que más lo enganche.",
       tech: ["Python", "Machine Learning", "Web Scraping"],
-      image: "assets/images/BrainStorm Read.Me.png"
+      image: "assets/images/brainstorm-readme.png"
     },
     2: {
       title: "P.C.S. — Predictive Chart System",
       description:
         "Un sistema de análisis en tiempo real desarrollado para interpretar gráficos financieros basándose en métricas gráficas y financieras. El sistema combina el análisis de gráficos con un sistema de Web Scraping en tiempo real aplicado a blogs financieros y fuentes relevantes, recopilando información relacionada con el activo analizado. Esta información se procesa junto con los datos gráficos, proporcionando un análisis más completo y contribuyendo a evaluaciones predictivas basadas tanto en métricas cuantitativas como en la información financiera más reciente.",
       tech: ["Python", "TensorFlow", "Pandas"],
-      image: "assets/images/Brainstrom P.C.S..png"
+      image: "assets/images/brainstorm-p-c-s.png"
     },
     3: {
       title: "Sistema de Secretaría — Proyecto en C++",
       description:
         "Sistema de Secretaría Escolar desarrollado en C++ con el objetivo didáctico de reforzar la estructuración del lenguaje, promover buenas prácticas de desarrollo e integrar conceptos esenciales de la ingeniería de software. El sistema permite agregar usuarios con información como nombre, apellido, documento de identidad y cargo — abarcando perfiles como alumnos, profesores y personal administrativo. Ofrece funcionalidades de consulta de registros para análisis de datos, eliminación de usuarios y organización mediante etiquetas y atributos vinculados a cada perfil. La interfaz funciona a través de línea de comandos, con entrada y salida de datos enfocada en la usabilidad. El proyecto trabaja conceptos fundamentales como modularización y organización de código en C++, creación y lectura de archivos para simular una base de datos, estructuras de decisiones y bucles, principios básicos de arquitectura de software con separación de capas y responsabilidades, además de la construcción de diagramas de flujo para representar la lógica del sistema y la elaboración de un roadmap evolutivo con lanzamientos simulados para el seguimiento de stakeholders.",
       tech: ["C++", "CLI", "Archivo de Datos"],
-      image: "assets/images/Brainstorm Input Data.png"
+      image: "assets/images/brainstorm-input-data.png"
     },
     4: {
       title: "Proyectos Web — Desarrollo Creativo",
       description:
         "Mis proyectos web se construyen con una mirada enfocada en la inmersión y la experiencia del usuario. Con cada nuevo proyecto, busco evolucionar y aportar más sentimiento a lo que creo — cada detalle visual, cada transición y cada movimiento están pensados para generar una conexión genuina con quien accede. En la mayoría de mis proyectos, utilizo vídeos creados en After Effects para la producción de movimientos brutos que sirven como base para las animaciones finales. Estos vídeos pasan por un proceso de posicionamiento y conceptualización de animación, donde defino timing, dirección y fluidez para que cada elemento se comporte de forma coherente dentro de la interfaz. El refinamiento gráfico y la mejora visual de los proyectos se realizan a través de Inteligencias Artificiales locales, las cuales he desplegado en mi propia máquina. Esta elección se debe tanto a cuestiones financieras — evitando costos recurrentes con servicios en la nube — como al conocimiento adquirido al explorar el funcionamiento local de modelos de IA, entendiendo sus limitaciones, posibilidades y cómo extraer el mejor resultado para cada escenario.",
       tech: ["HTML", "CSS", "JavaScript", "After Effects", "IA Local"],
-      image: "assets/images/BrainStorm WebDesign.png"
+      image: "assets/images/brainstorm-web-design.png"
     },
     5: {
       title: "Otros Proyectos — Hardware, Fork, The Cure & Comunidad",
       description:
         "Más allá del desarrollo web, tengo proyectos que involucran hardware, juegos y comunidad. Como técnico mecatrónico formado, tengo facilidad con electrónica y programación embebida. Mi proyecto de hardware más reciente es una cámara con Arduino integrado capaz de identificar si una persona está de pie, sentada o acostada — con el objetivo de comercializar esta solución para casas de reposo que cuidan de personas mayores, ofreciendo monitoreo inteligente y accesible. También mantengo el portal de información Fork Nosso de Cada Dia, donde comparto enseñanzas breves sobre tecnología para la comunidad, y el canal de YouTube del mismo nombre, orientado a proyectos más extensos, debates sobre temas que requieren mayor profundidad y enseñanzas relevantes para la comunidad de T.I. Actualmente estoy desarrollando un survival horror game en mis ratos libres llamado The Cure. El juego está protagonizado por una mujer que vive con esquizofrenia y es secuestrada por un hombre que insiste en que está enferma y necesita una cura. Tras el secuestro, se encuentra encerrada en una habitación de una casa de horrores en un parque de diversiones abandonado y descubre que el hombre ya había secuestrado a otras tres mujeres: una con discapacidad visual que la dejaba parcialmente ciega, una mujer con rasgos autistas y otra que sufría de bipolaridad. Todas creían haber sido secuestradas por un lunático que se refería a su condición con tono prejuicioso, pero estaban a punto de descubrir que la enfermedad a la que se refería era en realidad una maldición espiritual que la mayoría no sabía que poseía. El juego tiene como objetivo traer, de forma poética, la inversión de la visión negativa que la sociedad impone a través de prejuicios capacitistas, transformando estas particularidades en habilidades sobrenaturales únicas en cada personaje. Cada una vive en un universo de horror espiritual construido por escenarios basados en proyecciones de complejos fóbicos de sus propias mentes, oprimidas por la vivencia del prejuicio social. Amo hacer que mis ideas impacten a las personas, creo que el cambio dentro de nosotros solo puede ser aceptado si primero es vivido, por eso me esfuerzo tanto en traer ambientes con mayor optimización, mejores visuales, mejores diseños de sonido, cada vez mejores en cada proyecto que creo. Para mí, no se trata solo de rendimiento — se trata del sentimiento del usuario, sea un cliente, un comprador o un seguidor en una red social. Si son impactados de la manera correcta, mi deber se habrá cumplido.",
       tech: ["Arduino", "C++", "Hardware", "Game Design", "YouTube"],
-      image: "assets/images/BrainStrom Outros Projetos.png"
+      image: "assets/images/brainstorm-outros-projetos.png"
     },
   },
 
@@ -128,14 +128,14 @@ const projectsData = {
       description:
         "Readme är ett pågående projekt som utforskar hur engagerande läsning kan vara för en individ, med hänsyn till personliga intressen och innehållsvanor. Systemet består av tre isolerade miljöer som samverkar. Den första miljön samlar in användardata — läsfrekvens, personliga intressen och preferenser — och utsätter dem för tester som beräknar läshastighetsmått och etablerar en kvantitativ bas som huvudsakligt intresseindikator för skriftligt innehåll. Den andra miljön är en AI-träningsmodul, fodd med erkända böcker om läsning och litterärt intresse, som lär sig att presentera läsning på ett personligt sätt för varje användare med hjälp av interna och adaptiva matematiska mått. Den tredje miljön är ett snabbläsningsscenario som använder webbskrapning från flera bloggar online för att exponera användaren för innehåll som överensstämmer med deras angivna intressen från den första miljön. Användarens interaktioner med dessa texter uppdaterar kontinuerligt AI-mätten och genererar data om läspersonlighet — användbart för att skapa liknande profiler för användare med jämförbara mönster — samt om prestanda per intressekategori. De förädlade data flödar tillbaka till den andra miljön och skapar korrelationer som gör det möjligt för systemet att förutsäga vilket innehåll som ska erbjudas, i vilken ton och skrivstil. Det slutliga målet är att skapa en intelligent nyhetsapp som levererar till läsaren enbart den information som verkligen betyder något, i det format som engagerar mest.",
       tech: ["Python", "Machine Learning", "Web Scraping"],
-      image: "assets/images/BrainStorm Read.Me.png"
+      image: "assets/images/brainstorm-readme.png"
     },
     2: {
       title: "P.C.S. — Prediktivt Diagram System",
       description:
         "Ett realtidssystem utvecklat för att analysera finansiella diagram baserat på grafiska och finansiella mätvärden. Systemet kombinerar diagramanalys med Web Scraping i realtid från finansiella bloggar och relevanta källor för att samla in information om den analyserade tillgången. Informationen behandlas tillsammans med diagramdata för att ge en mer omfattande analys och möjliggöra prediktiva bedömningar baserade på både kvantitativa mätvärden och aktuell finansiell information.",
       tech: ["Python", "TensorFlow", "Pandas"],
-      image: "assets/images/Brainstrom P.C.S..png"
+      image: "assets/images/brainstorm-p-c-s.png"
     },
     3: {
       title: "Skolsekreterarsystem — C++-projekt",
