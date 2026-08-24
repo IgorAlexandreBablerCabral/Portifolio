@@ -773,7 +773,7 @@ window.addEventListener("DOMContentLoaded", () => {
     enterBtn.addEventListener("click", () => {
 
       if (bgMusic && bgMusic.paused) {
-        bgMusic.volume = 0.2;
+        bgMusic.volume = 0.1;
         bgMusic.play().then(() => {
           if (musicPlayer) {
             musicPlayer.classList.add("playing");
@@ -831,7 +831,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (musicStarted) return;
       musicStarted = true;
 
-      bgMusic.volume = 0.2;
+      bgMusic.volume = 0.1;
       bgMusic.play().then(() => {
         musicPlayer.classList.add("playing");
       }).catch(() => {
